@@ -11,13 +11,13 @@ inputFirstname.addEventListener("keyup", function() {
 
 const age = document.getElementById("age");
 const hard_truth = document.getElementById("a-hard-truth");
-
-if (age.value >= 18){
-    hard_truth.style.visibility = "visible"; 
-}else{
-    alert("To young");
-}
-
+age.addEventListener("keyup",function(){
+    if (age.value >= 18){
+        hard_truth.style.visibility = "visible"; 
+    }else{
+        alert("Too young");
+    }
+});
 //change border color when the pwd is to small and change bg color when the pwd dsnt match 
 
 const pwd = document.getElementById("pwd");
