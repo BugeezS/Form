@@ -30,11 +30,6 @@ pwd.addEventListener("keyup", function(){
         pwd.style.borderColor = "initial";
     }
 
-    if (pwd.value !== pwd_confirm.value){
-        pwd.style.backgroundColor = "green";
-    }else{
-        pwd.style.backgroundColor = "initial";
-    }
 });
 
 pwd_confirm.addEventListener("keyup", function(){
@@ -42,6 +37,13 @@ pwd_confirm.addEventListener("keyup", function(){
         pwd_confirm.style.borderColor = "red";
     }else{
         pwd_confirm.style.borderColor = "initial";
+    }
+    if (pwd.value !== pwd_confirm.value){
+        pwd_confirm.style.backgroundColor = "red";
+        pwd.style.backgroundColor = "red";
+    }else{
+        pwd_confirm.style.backgroundColor = "initial";
+        pwd.style.backgroundColor = "initial";
     }
 });
 
